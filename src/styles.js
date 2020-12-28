@@ -4,6 +4,39 @@ import styled from "styled-components";
 
 // Pink #f6dfec
 
+export const NavBarStyle = styled.div`
+  background-color: #203d35;
+  position: fixed;
+  z-index: 1;
+  width: 100%;
+  transition: top 0.3s;
+`;
+
+export const NavBarLink = styled.span`
+  display: inline block;
+  color: #f6dfec;
+  text-align: center;
+  margin-top: 15vh;
+  padding: 15px;
+  font-size: 120%;
+  text-decoration: none;
+
+  &:hover {
+    background-color: #f6dfec;
+    color: black;
+    cursor: pointer;
+  }
+`;
+
+export const TopRightIcons = styled.div`
+  color: #f6dfec;
+  position: absolute;
+  right: 7%;
+  top: 0;
+  padding-top: 1.5vh;
+  font-size: 150%;
+`;
+
 export const GeneralLanding = styled.div`
   min-height: 100vh;
   background-color: #203d35;
@@ -24,9 +57,8 @@ export const GeneralFeatured = styled.div`
 `;
 
 export const FeaturedText = styled.div`
-  margin-left: 15vw;
   margin-top: 10vh;
-  font-size: 150%;
+  font-size: 140%;
 `;
 
 export const GeneralProducts = styled.div`

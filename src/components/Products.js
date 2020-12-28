@@ -3,7 +3,7 @@ import React from "react";
 import { GeneralProducts } from "../styles";
 
 const OtherProds = () => {
-  return <GeneralProducts>Hello </GeneralProducts>;
+  return <GeneralProducts></GeneralProducts>;
 };
 
 export default OtherProds;
