@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { useHistory } from "react-router-dom";
+import CartContent from "./cartMagic";
 
 import { Drawer, Badge, Button, Tooltip } from "antd";
 import {
@@ -32,7 +33,7 @@ const Cart = () => {
   };
   const onCheckout = () => {
     history.push("/checkout");
-    // dispatch(setCartVisibility(false));
+    dispatch(setCartVisibility(false));
   };
 
   const handleRefresh = () => {
@@ -55,15 +56,37 @@ const Cart = () => {
           />
         </Button>
         <Drawer
-          title="Basic Drawer"
+          title="Your Cart:"
           placement="right"
           closable={false}
           onClose={onClose}
           visible={visibility}
+          footer={
+            <div
+              style={{
+                textAlign: "right",
+              }}
+            >
+              <Tooltip title="refresh cart" color={" #707F9C"}>
+                <Button onClick={handleRefresh} style={{ float: "left" }}>
+                  <RedoOutlined />
+                </Button>
+              </Tooltip>
+              <span style={{ marginRight: "2vh" }}>
+                Cart Total: ${cartTotal}
+              </span>
+              <br />
+              <br />
+              <Button onClick={onClose} style={{ marginRight: 8 }}>
+                Close
+              </Button>
+              <Button onClick={onCheckout} type="primary">
+                Checkout &nbsp; <RightOutlined />
+              </Button>
+            </div>
+          }
         >
-          <p>Some contents...</p>
-          <p>Some contents...</p>
-          <p>Some contents...</p>
+          <CartContent />
         </Drawer>
       </Badge>
     </>
