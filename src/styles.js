@@ -20,6 +20,8 @@ export const NavBarLink = styled.span`
   padding: 15px;
   font-size: 120%;
   text-decoration: none;
+  border-radius: 5px;
+  transition: 0.3s;
 
   &:hover {
     background-color: #f6dfec;

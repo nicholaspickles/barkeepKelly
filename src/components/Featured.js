@@ -7,7 +7,7 @@ import silentPool from "../localImages/silentPool.png";
 
 const FeaturedPage = () => {
   return (
-    <GeneralFeatured>
+    <GeneralFeatured id="featured">
       <Row>
         <Col xs={{ order: 2, span: 24 }} sm={{ order: 1, span: 14 }}>
           <Row>

@@ -8,13 +8,15 @@ import FeaturedPage from "./components/Featured";
 import OtherProds from "./components/Products";
 import Footer from "./components/Footer";
 
+//Add id to the components to allow for scrolling
+
 function App() {
   return (
     <div>
       <GlobalFonts />
-      <LandingScreen />
-      <FeaturedPage />
-      <OtherProds />
+      <LandingScreen id="landing" />
+      <FeaturedPage id="featured" />
+      <OtherProds id="products" />
       <Footer />
     </div>
   );

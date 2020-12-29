@@ -2,8 +2,11 @@ import React, { useState, useEffect } from "react";
 
 import { Row, Col } from "antd";
 import { ShoppingCartOutlined } from "@ant-design/icons";
+import { Link, animateScroll as scroll } from "react-scroll";
 
 import { TopRightIcons, NavBarLink } from "../styles";
+
+import CartDrawer from "./cart/cart";
 
 function debounce(func, wait, immediate) {
   var timeout;
@@ -61,14 +64,18 @@ const Navbar = () => {
     >
       <Row>
         <Col span={12} style={{ textAlign: "center" }}>
-          <NavBarLink>Products</NavBarLink>
+          <Link to="products" spy={true} smooth={true}>
+            <NavBarLink>Products</NavBarLink>
+          </Link>
         </Col>
         <Col span={12} style={{ textAlign: "center" }}>
-          <NavBarLink>Featured</NavBarLink>
+          <Link to="featured" spy={true} smooth={true}>
+            <NavBarLink>Featured</NavBarLink>
+          </Link>
         </Col>
       </Row>
       <TopRightIcons>
-        <ShoppingCartOutlined />
+        <CartDrawer />
       </TopRightIcons>
     </div>
   );

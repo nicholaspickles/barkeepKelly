@@ -7,10 +7,13 @@ import reportWebVitals from "./reportWebVitals";
 
 //REDUX
 import { Provider } from "react-redux";
-import configuerStore from "./redux/store";
+import { createStore } from "redux";
+import reducers from "./redux/store";
+
+const store = createStore(reducers);
 
 ReactDOM.render(
-  <Provider store={configuerStore()}>
+  <Provider store={store}>
     <App />
   </Provider>,
   document.getElementById("root")
