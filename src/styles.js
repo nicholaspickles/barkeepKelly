@@ -44,12 +44,12 @@ export const GeneralLanding = styled.div`
   background-color: #203d35;
 `;
 
-export const LandingTitleDiv = styled.div`
+export const LandingTitleDiv = styled.h3`
   font-family: NHG;
   font-size: 200%;
   color: #f6dfec;
   text-align: center;
-  padding: 5vh;
+  padding: 7vh;
 `;
 
 export const GeneralFeatured = styled.div`
@@ -69,7 +69,28 @@ export const GeneralProducts = styled.div`
   font-family: butler;
 `;
 
-export const FooterStyle = styled.div`
-  min-height: 70vh;
-  background-color: #203d35;
+export const FootHeader = styled.div`
+  color: rgb(230, 220, 220);
+  font-size: 15px;
+  font-family: "Muli";
+  margin-top: 5vh;
+`;
+
+export const FootText = styled.div`
+  color: rgb(230, 220, 220);
+  font-size: 12px;
+  font-family: "Muli";
+  font-weight: 100;
+  padding: 0;
+`;
+
+export const FootTextBold = styled.div`
+  font-weight: bold;
+  margin-bottom: 10px;
+`;
+
+export const FootInfo = styled.div`
+  bottom: 0;
+  width: 100%;
+  padding: 8vh 0;
 `;

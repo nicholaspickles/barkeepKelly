@@ -53,6 +53,7 @@ const Navbar = () => {
     width: "100%",
     transition: "top 0.3s",
     paddingTop: "2vh",
+    paddingBottom: "2vh",
   };
 
   return (

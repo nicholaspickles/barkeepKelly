@@ -1,9 +1,137 @@
 import React from "react";
 
-import { FooterStyle } from "../styles";
+//AESTHETICS imports
+import { FootHeader, FootText, FootTextBold, FootInfo } from "../styles";
+import { Layout, Row, Col } from "antd";
+import {
+  InstagramOutlined,
+  GithubOutlined,
+  SmileOutlined,
+} from "@ant-design/icons";
+import "antd/dist/antd.css";
 
-const Footer = () => {
-  return <FooterStyle>footer shit</FooterStyle>;
+const { Footer } = Layout;
+
+const Queries = () => {
+  return (
+    <div>
+      <FootHeader>
+        <p>S A Y &nbsp; H I !</p>
+      </FootHeader>
+      <FootText>
+        <p>
+          Got any questions,enquires or ideas?
+          <br />
+          Feel free to get in touch with us!
+        </p>
+        <FootTextBold>
+          <p style={{ marginTop: 20 }}>nicholaskongsg@gmail.com</p>
+          <p>+65 9855 6745</p>
+        </FootTextBold>
+      </FootText>
+    </div>
+  );
 };
 
-export default Footer;
+const FollowUs = () => {
+  return (
+    <div>
+      <FootHeader>
+        <p>F O L L O W &nbsp; U S </p>
+      </FootHeader>
+      <FootText style={{ marginBottom: 10, alignContent: "center" }}>
+        <p>Nicholas "Pickles" Kong</p>
+        <a
+          href="https://www.instagram.com/nicholaspickles/"
+          rel="noreferrer"
+          target="_blank"
+          style={{ marginRight: 20 }}
+        >
+          <InstagramOutlined style={{ color: "white" }} />
+        </a>
+        <a
+          href="https://www.github.com/nicholaspickles"
+          target="_blank"
+          rel="noreferrer"
+        >
+          <GithubOutlined style={{ color: "white" }} />
+        </a>
+      </FootText>
+      <FootText style={{ marginBottom: 10 }}>
+        <p>Amanda "Sugarpeas" Kong</p>
+        <a
+          href="https://www.instagram.com/kong.pdf/"
+          rel="noreferrer"
+          target="_blank"
+          style={{ marginRight: 20 }}
+        >
+          <InstagramOutlined style={{ color: "white" }} />
+        </a>
+        <a
+          href="https://amandakongakk.wixsite.com/amandakong"
+          target="_blank"
+          rel="noreferrer"
+        >
+          <SmileOutlined style={{ color: "white" }} />
+        </a>
+      </FootText>
+    </div>
+  );
+};
+
+const Policy = () => {
+  return (
+    <div>
+      <FootHeader>P O L I C Y</FootHeader>
+      <FootText>
+        <p>
+          Don't get sick - after I sell it to you,
+          <br />
+          IT AIN'T MY PROBLEM
+        </p>
+      </FootText>
+    </div>
+  );
+};
+
+const FooterText = () => {
+  return (
+    <FootInfo style={{ zIndex: 5 }}>
+      <Row justify="center" align="middle">
+        <Col xs={24} xl={8}>
+          <Queries />
+        </Col>
+        <Col xs={24} xl={8}>
+          <FollowUs />
+        </Col>
+        <Col xs={24} xl={8}>
+          <Policy />
+        </Col>
+      </Row>
+    </FootInfo>
+  );
+};
+
+const Foot = () => {
+  return (
+    <Footer
+      style={{
+        paddingLeft: 0,
+        paddingRight: 0,
+        backgroundColor: "#203d35",
+        textAlign: "center",
+        overflowY: "auto",
+        overflowX: "hidden",
+        minHeight: "50vh",
+      }}
+    >
+      <Row>
+        <Col flex={15}>
+          <FooterText />
+        </Col>
+      </Row>
+    </Footer>
+  );
+};
+
+export default Foot;
