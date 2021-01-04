@@ -19,9 +19,7 @@ const CartContent = () => {
       {ordered.length > 0 ? (
         ordered.map((order) => (
           <Row>
-            <Col flex={1}>
-              <MiniImg src={order.image} />
-            </Col>
+            <Col flex={1}>{/* <MiniImg src={order.image} /> */}</Col>
             <Col flex={2}>
               <Row>
                 {order.quantity} x {order.name}
@@ -31,12 +29,13 @@ const CartContent = () => {
               </Row>
             </Col>
             <Col flex={1}>
-              <RemoveButton
+              Remove
+              {/* <RemoveButton
                 size={"small"}
                 onClick={() => handleRemoveItem(order.id)}
               >
                 Remove
-              </RemoveButton>
+              </RemoveButton> */}
             </Col>
           </Row>
         ))
